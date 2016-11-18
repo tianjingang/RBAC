@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加用户</title>
+</head>
+<body>
+	<form action="{:U('Index/adduser')}" method="post">
+		<table>
+			<tr>
+				<td>用户名：</td>
+				<td><input type="text" name="username" ></td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td><input type="password" name="pwd" ></td>
+			</tr>
+			<tr>
+				<td>角色</td>
+				<td><select name="r_id" >
+				<volist name="res" id="v">
+					<option value="{$v.r_id}">{$v.r_role}</option>
+				</volist>
+				</select></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="添加用户"></td>
+				<td></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

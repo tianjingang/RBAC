@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>欢迎<?php echo (session('u_name')); ?>讲师登录教学管理系统

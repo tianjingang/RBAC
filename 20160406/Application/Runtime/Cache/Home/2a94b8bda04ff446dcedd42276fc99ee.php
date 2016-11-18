@@ -1,0 +1,24 @@
+<?php if (!defined('THINK_PATH')) exit();?><meta charset="utf-8">
+<table><tr><td><h1>在线申请</h1></td></tr></table>
+<form action="/mouth5/20160406/index.php/Home/User/addd" method="post">
+    <table>
+    <tr>
+        <td>姓名：</td>
+        <td><input type="text" name="uname"></td>
+    </tr>
+    <tr>
+        <td>手机号码：</td>
+        <td><input type="text" name="upwd"></td>
+    </tr>
+    <tr>
+        <td>性别：</td>
+        <td><input type="radio" name="xing" value="男">男
+            <input type="radio" name="xing" value="女">女
+        </td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="下一步"></td>
+        <td><a href="/mouth5/20160406/index.php/Home/Login/login">登录</a></td>
+    </tr>
+        </table>
+</form>

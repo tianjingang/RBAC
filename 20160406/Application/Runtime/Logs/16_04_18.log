@@ -1,0 +1,17 @@
+[ 2016-04-18T09:13:27+08:00 ] 127.0.0.1 /wuyue/20160406/index.php
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.012985s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020859s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.082556s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082710s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.015328s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015442s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.024744s ]
+INFO: [ app_end ] --END-- [ RunTime:0.024913s ]
+

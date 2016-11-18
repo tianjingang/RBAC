@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+<table>
+    <tr>
+        <td><a href="{:U('Index/index')}">切换用户</a>||<a href="{:U('Index/lst')}">申请填写</a></td>
+    </tr>
+</table>
+<div id="do">
+    <table border="1">
+        <tr>
+
+            <td>登录身份：{$Think.session.uname}</td>
+        </tr>
+        <foreach name="data" item="v">
+            <tr>
+                <td>错题图片预览：<br/><img src="__ROOT__/Uploads{$v.tu}" width="100px" height="80px"/></td>
+                <td>错题评判：<br/><a href="javascript:void(0)" onclick="pass({$v.uid})">通过</a>||<a href="javascript:void(0)" onclick="pass_no({$v.uid})">不通过</a></td>
+                <td>修改方案：<br/>{$v.yin}</td>
+            </tr>
+        </foreach>
+    </table>
+</div>
+<script>
+    function pass(id){
+        var ajax = new XMLHttpRequest();
+        ajax.onreadystatechange  =  function(){
+            if(ajax.readyState == 4 && ajax.status==200) {
+                document.getElementById('do').innerHTML = ajax.responseText;
+            }
+        }
+        ajax.open('get','__URL__/lst3_pass/id/'+id);
+        ajax.send(null);
+    }
+    function pass_no(id){
+        var ajax = new XMLHttpRequest();
+        ajax.onreadystatechange  =  function(){
+            if(ajax.readyState == 4 && ajax.status==200) {
+                document.getElementById('do').innerHTML = ajax.responseText;
+            }
+        }
+        ajax.open('get','__URL__/lst3_pass_no/id/'+id);
+        ajax.send(null);
+    }
+</script>

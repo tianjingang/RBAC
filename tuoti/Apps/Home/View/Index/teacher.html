@@ -1,0 +1,23 @@
+
+<form action="{:U('Index/chushen')}" method="post" enctype="multipart/form-data">
+    <table border="">
+        <tr>
+            <td>登录身份:讲师-{$Think.session.u_name}</td>
+        </tr>
+        <volist name="arr" id="val">
+        <tr>
+            <td>错题图片预览:
+                <img src="__ROOT__/{$val.photo}" alt="" height="80" width="80"/>
+            </td>
+            <td>错题评判:
+                <input type="radio" name="ping" value="通过"/>通过
+                <input type="radio" name="ping" value="不通过"/>不通过
+            </td>
+            <td>修改方案:
+                <textarea name="p_reson"  cols="20" rows="10">{$val.p_reson}</textarea>
+            </td>
+            <td><input type="submit" value="提交"/></td>
+        </tr>
+        </volist>
+    </table>
+</form>

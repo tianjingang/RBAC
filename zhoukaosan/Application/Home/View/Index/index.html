@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户信息</title>
+</head>
+<body>
+	<p>您的用户名是：{$Think.session.uname}</p>
+	<p>您的角色是：<volist name="res" id="val">{$val.r_role}&nbsp;&nbsp;</volist></p>
+	<a href="{:U('Index/fenpei')}">分配角色</a><br>
+	<a href="{:U('Index/quanxian')}">角色权限分配</a><br>
+	<a href="{:U('Index/adduser')}">添加用户</a><br>
+	
+
+</body>
+</html>

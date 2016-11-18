@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>权限分配</title>
+	 <script>
+       var  uquery="{:U('Index/uquery')}";
+    </script>
+</head>
+<body>
+	<form action="{:U('Index/quanxian')}" method="post">
+		<select name="r_id" id="r_id">
+		 <option value="">请选择角色...</option>
+		<volist name="res" id="v">
+            <option value="{$v.r_id}">{$v.r_role}</option>
+		</volist>
+		</select><br>
+		<volist name="arr" id="v">
+           <?php echo str_repeat('&nbsp;&nbsp;',$v['level']);?>
+           <input type="checkbox" name="p_id[]" value="{$v.p_id}">{$v.pivilege}<br>
+         </volist>
+         <input type="submit" value="分配权限">
+	</form>
+</body>
+</html>
+<script src="__PUBLIC__/Js/jquery-1.7.2.min.js"></script>
+<script>
+    $(function(){
+        $('#r_id').change(function(){
+        	//alert(1)
+            var r_id=$(this).val();
+            //alert(uid);
+            var p_id=$("input[name='p_id[]']");
+            $.ajax({
+                type:'post',
+                url:uquery,
+                data:{
+                    r_id:r_id
+                },
+                dataType:'json',
+                success:function(data){
+                    if(data){
+                        //alert(234);
+                        p_id.attr('checked',false);
+                        for(var i=0;i<p_id.length;i++){
+                            for(var j=0;j<data.length;j++){
+                                 if(data[j].p_id==p_id.eq(i).val()){
+                                        p_id.eq(i).attr('checked',true);
+                                 }
+                            }
+                        }
+
+                    }
+                }
+            });
+        });
+    });
+</script>

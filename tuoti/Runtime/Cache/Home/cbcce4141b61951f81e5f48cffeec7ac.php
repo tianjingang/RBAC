@@ -1,0 +1,18 @@
+<?php if (!defined('THINK_PATH')) exit();?><form action="<?php echo U('Index/student_tian');?>" method="post" enctype="multipart/form-data">
+<h1 style="color: red;">学生申报页面</h1>
+<table border="1">
+    <tr>
+        <td>登录身份:学生-<?php echo (session('u_name')); ?></td>
+        <td style="text-align: center;">
+            <input type="submit" value="申请"/>
+        </td>
+    </tr>
+    <tr>
+        <td>错题图片上传:
+            <input type="file" name="photo"/></td>
+        <td style="text-align: center;">
+            <textarea name="p_reson" id="" cols="30" rows="10"></textarea>
+        </td>
+    </tr>
+</table>
+</form>

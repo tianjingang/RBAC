@@ -1,0 +1,54 @@
+<script src="__PUBLIC__/Home/jquery-1.7.2.min.js"></script>
+<form action="{:U('Index/add')}" method="post">
+    <input type="hidden" value="{$Think.session.u_name}" class="hidden"/>
+<table>
+    <tr>
+        <td></td>
+        <td>显示顺序</td>
+        <td>站点名称</td>
+        <td>站点(URL)</td>
+        <td>文字说明</td>
+    </tr>
+    <volist name="arr" id="val">
+    <tr>
+        <td><input type="checkbox" name="p_id[]" p_id="{$val.p_id}"/></td>
+        <td><input type="text" value="{$val.p_order}"/></td>
+        <td><input type="text" value="{$val.p_name}"/></td>
+        <td><input type="text" value="{$val.p_url}"/></td>
+        <td><input type="text" value="{$val.p_say}"/></td>
+    </tr>
+    </volist>
+    <tr class="tr">
+        <td></td>
+        <td><a href="javascript:void(0)" class="ad">+添加友情链接</a></td></tr>
+</table>
+    <input type="checkbox"/><span>删</span>
+    <if condition="$Think.session.u_name eq 'bianji'">
+        <else/>
+        <input type="submit" value="提交"/>
+    </if>
+</form>
+<script>
+    $(function(){
+        $('.ad').click(function(){
+            var u_name=$('.hidden').val();
+            if(u_name=='bianji'){
+                alert('对不起！权限不足');
+            }
+            else{
+                //alert(1);
+                var str=str+'<tr><td><input type="checkbox" name="p_id[]" p_id="{$val.p_id}"/></td>'
+                str=str+' <td><input type="text" name="p_order"/></td>'
+                str=str+'<td><input type="text" name="p_name"/></td>'
+                str=str+'<td><input type="text" name="p_url"/></td>'
+                str=str+'<td><input type="text" name="p_say"/></td></tr>';
+                var tr=$('.tr');
+                tr.before(str);
+            }
+        });
+
+
+
+    });
+
+</script>

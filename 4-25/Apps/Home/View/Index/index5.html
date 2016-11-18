@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script src="__PUBLIC__/JS/jquery-1.7.2.min.js"></script>
+</head>
+<script>
+    $(function(){
+        $("select[name='r_id']").change(function(){
+            //接角色值
+            var rid=$(this).val();
+            //接权限id
+            var p_id=$("input[name='p_id[]']");
+        });
+    });
+</script>
+<body>
+<h1 style="color: red">分配权限</h1>
+    <form action="__URL__/add_power/" method="post">
+             <table>
+                 <tr>
+                     <td>
+                         角色:<select name="r_id">
+                         <option value="请选择">请选择</option>
+                             <volist name="ar" id="v">
+                                 <option value="{$v.r_id}">{$v.r_name}</option>
+                             </volist>
+                         </select>
+                     </td>
+                     <td><input type="submit" value="分配权限"/></td>
+                 </tr>
+                 <input type="hidden" name="id" value="234455"/>
+                <tr>
+                    <volist name="data" id="val">
+                        <p><input type="checkbox" name="p_id[]" value="{$val.p_id}"/>{$val.p_power}<br/></p>
+                    </volist>
+                </tr>
+             </table>
+         </form>
+</body>
+</html>

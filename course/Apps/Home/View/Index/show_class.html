@@ -1,0 +1,20 @@
+<table border="1">
+    <h3>欢迎{$Think.session.u_name}同学查看课程信息
+    </h3>
+    <tr>
+        <td>编号</td>
+        <td>学生姓名</td>
+        <td>课程名称</td>
+        <td>班级</td>
+        <td>讲师</td>
+    </tr>
+    <volist name="res2" id="val" key="str">
+    <tr>
+        <td>{$str}</td>
+        <td>{$Think.session.u_name}</td>
+        <td>{$val.c_course}</td>
+        <td>{$res1.l_class}</td>
+        <td>{$val.u_name}</td>
+    </tr>
+    </volist>
+</table>

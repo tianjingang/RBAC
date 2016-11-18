@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<table>
+    <tr>
+        <td><a href="{:U('Index/index')}">切换用户</a>||<a href="{:U('Index/lst')}">申请填写</a></td>
+    </tr>
+</table>
+<form action="{:U('Pay/tian')}" method="post" enctype="multipart/form-data">
+    <table border="1">
+        <tr>
+
+            <td>登录身份：{$Think.session.uname}</td>
+            <td>审核状态</td>
+        </tr>
+        <foreach name="data" item="v">
+            <tr>
+                <td>错题图片预览：<br/><img src="__ROOT__/Uploads{$v.tu}" width="100px" height="80px"/></td>
+                <td>
+                    <if condition="$v.tai eq 0">
+                            <font color="red">未审核</font>
+                        <elseif condition="$v.tai eq 1"/>
+                        <font color="blue">审核中</font>
+                        <elseif condition="$v.tai eq 2"/>
+                        <font color="aqua">通过</font>
+                        <else/>
+                        未通过
+                    </if>
+                </td>
+            </tr>
+        </foreach>
+    </table>
+</form>

@@ -1,0 +1,20 @@
+[ 2016-05-14T15:32:05+08:00 ] 127.0.0.1 /mouth5/zhoukaosan/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010785s ]
+
+[ 2016-05-14T15:32:05+08:00 ] 127.0.0.1 /mouth5/zhoukaosan/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000352s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001389s ]
+
+[ 2016-05-14T15:32:16+08:00 ] 127.0.0.1 /mouth5/zhoukaosan/index.php/Home/Login/login_check.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+
+[ 2016-05-14T15:32:16+08:00 ] 127.0.0.1 /mouth5/zhoukaosan/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+

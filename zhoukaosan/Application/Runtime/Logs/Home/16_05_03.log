@@ -1,0 +1,10 @@
+[ 2016-05-03T20:09:52+08:00 ] 127.0.0.1 /mouth5/zhoukaosan/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+
+[ 2016-05-03T20:09:52+08:00 ] 127.0.0.1 /mouth5/zhoukaosan/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
